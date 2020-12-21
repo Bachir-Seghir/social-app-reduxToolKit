@@ -65,7 +65,7 @@ const notificationTemplates = [
 new Server({
   routes() {
     this.namespace = 'fakeApi'
-    this.timing = 2000
+    //this.timing = 2000
 
     this.resource('users')
     this.resource('posts')
@@ -185,7 +185,7 @@ new Server({
         }
       },
       afterCreate(post, server) {
-        //server.createList('comment', 3, { post })
+        server.createList('comment', 3, { post })
       },
 
       user: association(),
